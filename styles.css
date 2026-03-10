@@ -229,10 +229,19 @@ p {
 .hero-panel li {
   border: 1px solid rgba(190, 241, 227, 0.25);
   border-radius: 14px;
+}
+
+.hero-panel li a {
   padding: 12px 14px;
   display: flex;
   align-items: center;
   gap: 10px;
+  color: inherit;
+  border-radius: 14px;
+}
+
+.hero-panel li a:hover {
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .hero-panel span {
