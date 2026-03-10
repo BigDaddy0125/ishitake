@@ -236,8 +236,10 @@ p {
   display: flex;
   align-items: center;
   gap: 10px;
+  width: 100%;
   color: inherit;
   border-radius: 14px;
+  cursor: pointer;
 }
 
 .hero-panel li a:hover {

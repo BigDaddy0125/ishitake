@@ -29,3 +29,13 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+// Make the whole SERVICE FOCUS rows clickable even when users tap outside the text.
+document.querySelectorAll('.hero-panel li').forEach((item) => {
+  item.addEventListener('click', (event) => {
+    if (event.target.closest('a')) return;
+    const link = item.querySelector('a[href^="#"]');
+    if (!link) return;
+    window.location.hash = link.getAttribute('href');
+  });
+});
