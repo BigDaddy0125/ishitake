@@ -1,0 +1,4 @@
+﻿node_modules/
+dist/
+*.zip
+_origin_home.html
