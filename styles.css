@@ -11,6 +11,7 @@
   --radius: 20px;
   --shadow: 0 16px 44px rgba(9, 35, 31, 0.12);
   --container: min(1140px, calc(100% - 40px));
+  --anchor-offset: 96px;
 }
 
 * {
@@ -43,6 +44,10 @@ a {
 
 .section {
   padding: 92px 0;
+}
+
+.section[id] {
+  scroll-margin-top: var(--anchor-offset);
 }
 
 .site-header {
@@ -503,6 +508,10 @@ p {
   margin: 0;
 }
 @media (max-width: 960px) {
+  :root {
+    --anchor-offset: 84px;
+  }
+
   .nav-links {
     display: none;
   }
