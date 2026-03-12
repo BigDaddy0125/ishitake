@@ -10,6 +10,9 @@
     />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://ishitakes.com/" />
+    <link rel="alternate" hreflang="ja" href="https://ishitakes.com/" />
+    <link rel="alternate" hreflang="en" href="https://ishitakes.com/index-en.html" />
+    <link rel="alternate" hreflang="x-default" href="https://ishitakes.com/" />
 
     <meta property="og:locale" content="ja_JP" />
     <meta property="og:type" content="website" />
@@ -47,7 +50,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=IBM+Plex+Sans+JP:wght@400;500;700&family=Manrope:wght@400;500;700;800&family=Noto+Serif+JP:wght@500;700;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -62,14 +65,20 @@
             <small>Ishitake Co., Ltd.</small>
           </span>
         </a>
-        <button class="menu-button" aria-label="メニュー" aria-expanded="false">MENU</button>
-        <nav class="nav-links" aria-label="Main navigation">
-          <a href="#services">事業案内</a>
-          <a href="#robot">ロボティクス</a>
-          <a href="#clearance">ClearanceGate</a>
-          <a href="company.html">会社概要</a>
-          <a href="#contact">お問い合わせ</a>
-        </nav>
+        <div class="header-actions">
+          <nav class="nav-links" aria-label="Main navigation">
+            <a href="#services">事業案内</a>
+            <a href="#robot">ロボティクス</a>
+            <a href="#clearance">ClearanceGate</a>
+            <a href="company.html">会社概要</a>
+            <a href="#contact">お問い合わせ</a>
+          </nav>
+          <div class="lang-switch" aria-label="Language switcher">
+            <a class="lang-link is-active" href="index.html" lang="ja">JP</a>
+            <a class="lang-link" href="index-en.html" lang="en">EN</a>
+          </div>
+          <button class="menu-button" aria-label="メニュー" aria-expanded="false">MENU</button>
+        </div>
       </div>
       <nav class="mobile-nav" aria-label="Mobile navigation">
         <a href="#services">事業案内</a>
@@ -77,6 +86,10 @@
         <a href="#clearance">ClearanceGate</a>
         <a href="company.html">会社概要</a>
         <a href="#contact">お問い合わせ</a>
+        <div class="lang-switch" aria-label="Language switcher">
+          <a class="lang-link is-active" href="index.html" lang="ja">JP</a>
+          <a class="lang-link" href="index-en.html" lang="en">EN</a>
+        </div>
       </nav>
     </header>
 
@@ -114,23 +127,32 @@
         <div class="container reveal">
           <p class="kicker">Trust Signals</p>
           <h2 class="section-title">継続導入を前提とした技術支援体制</h2>
-          <div class="stats-grid">
-            <article class="stat-card">
-              <strong>2021</strong>
-              <p>会社設立。SESを中核に開発支援を開始</p>
+          <div class="trust-layout">
+            <article class="trust-lead">
+              <p class="trust-lead-copy">
+                単発の開発対応ではなく、継続導入を前提にした技術提供を重視しています。
+                既存業務への定着と運用性を見据え、実装から改善まで責任を持って伴走します。
+              </p>
+              <div class="trust-pill-row">
+                <span>2021 設立</span>
+                <span>AWS / Java / AI</span>
+                <span>高信頼領域の実績</span>
+              </div>
             </article>
-            <article class="stat-card">
-              <strong>AWS / Java / AI</strong>
-              <p>クラウド・業務系・AIを横断した実装経験</p>
-            </article>
-            <article class="stat-card">
-              <strong>金融・車載・航海</strong>
-              <p>高信頼性が求められる領域での開発実績</p>
-            </article>
-            <article class="stat-card">
-              <strong>SES + Product</strong>
-              <p>受託支援と自社開発を両立する体制へ拡張</p>
-            </article>
+            <ul class="trust-points">
+              <li>
+                <strong>継続支援</strong>
+                <p>SESを中核に、要件整理から運用改善まで一貫して支援</p>
+              </li>
+              <li>
+                <strong>横断実装力</strong>
+                <p>クラウド・業務系・AI・組込みを横断した実装経験</p>
+              </li>
+              <li>
+                <strong>高信頼性</strong>
+                <p>金融・車載・航海等、品質要件が高い領域での開発実績</p>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -139,27 +161,30 @@
         <div class="container">
           <p class="kicker">Services</p>
           <h2 class="section-title">主力事業: SES</h2>
-          <div class="grid three-cols">
-            <article class="card reveal">
-              <h3>SES（業務・Web系）</h3>
-              <p>
-                要件整理、設計、開発、保守運用まで一貫して支援します。現場定着を前提に、
-                品質・生産性・継続改善を重視した体制で提供しています。
-              </p>
+          <div class="services-stack">
+            <article class="service-row card reveal">
+              <div class="service-index">01</div>
+              <div>
+                <h3>SES（業務・Web系）</h3>
+                <p>要件整理、設計、開発、保守運用まで一貫して支援します。品質・生産性・継続改善を重視した体制です。</p>
+              </div>
+              <p class="service-meta">Requirements / Design / Delivery / Operations</p>
             </article>
-            <article class="card reveal delay-1">
-              <h3>SES（AI・データ活用）</h3>
-              <p>
-                AI導入検証だけで終わらせず、運用可能な実装へ接続します。推論連携、
-                データ連携、業務への適用までを実務目線でご支援します。
-              </p>
+            <article class="service-row card reveal delay-1">
+              <div class="service-index">02</div>
+              <div>
+                <h3>SES（AI・データ活用）</h3>
+                <p>PoCで終わらせず、推論連携・データ連携・業務適用まで接続し、運用可能な実装へ落とし込みます。</p>
+              </div>
+              <p class="service-meta">AI Integration / Data Pipeline / Production Readiness</p>
             </article>
-            <article class="card reveal delay-2">
-              <h3>対応技術領域</h3>
-              <p>
-                AWS、Java、Python、React、IoT/組込み。金融・車載・航海等の分野で培った
-                高信頼開発の知見を活かし、安定稼働を見据えた設計を行います。
-              </p>
+            <article class="service-row card reveal delay-2">
+              <div class="service-index">03</div>
+              <div>
+                <h3>対応技術領域</h3>
+                <p>AWS、Java、Python、React、IoT/組込み。高信頼領域で培った知見を活かし、安定稼働を見据えた設計を行います。</p>
+              </div>
+              <p class="service-meta">AWS / Java / Python / React / Embedded</p>
             </article>
           </div>
         </div>
@@ -169,31 +194,36 @@
         <div class="container">
           <p class="kicker">Remote Robotics</p>
           <h2 class="section-title">遠隔支援ロボット・機械腕開発</h2>
-          <div class="grid two-cols">
-            <article id="remote-robot" class="card card-dark reveal">
-              <h3>遠隔支援ロボット（経営革新テーマ）</h3>
+          <div class="robot-layout">
+            <article class="robot-overview card card-dark reveal">
+              <h3>実証から実運用へつなぐロボティクス開発</h3>
               <p>
-                LeRobot / XLeRobotを基盤として、小型自走台車と制御系を追加し、
-                家庭内支援で実用可能なロボットを目指しています。高齢者や身体の不自由な方への
-                日常支援を想定し、遠隔操作と安全性を両立するアーキテクチャを採用しています。
+                制御・通信・安全設計を同時に成立させることを前提に、実運用に耐える遠隔支援システムを設計しています。
+                ソフトウェア実装だけでなく、ハードウェア構成、運用負荷、保守性まで含めて最適化します。
               </p>
-              <p>
-                オープンソース互換性を維持しつつ、低価格構成（全体約660ドル）を志向し、
-                導入しやすい開発モデルを構築しています。
-              </p>
+              <ul class="robot-tags">
+                <li>LeRobot / XLeRobot</li>
+                <li>WebRTC / ROS</li>
+                <li>Raspberry Pi + MCU</li>
+                <li>Safety-first Control</li>
+              </ul>
             </article>
-            <article id="arm-system" class="card card-dark reveal delay-1">
-              <h3>機械腕（双腕）システム</h3>
-              <p>
-                Raspberry Pi + MCU、カメラ、距離/IMUセンサーを統合し、WebRTC/ROSを介した
-                遠隔操作を実現します。物品移動や簡易作業を視野に、制御安定性と可搬性を重視した
-                構成へ発展させています。
-              </p>
-              <p>
-                3Dプリント依存構成の課題を踏まえ、耐久性・安全性・保守性を重視した
-                ハードウェア設計および制御設計を進めています。
-              </p>
-            </article>
+            <div class="robot-detail-grid">
+              <article id="remote-robot" class="card card-dark reveal">
+                <h3>遠隔支援ロボット</h3>
+                <p>
+                  小型自走台車と制御系を組み合わせ、家庭内支援を想定した遠隔操作ロボットを開発。
+                  操作性と安全性を両立した実装を進めています。
+                </p>
+              </article>
+              <article id="arm-system" class="card card-dark reveal delay-1">
+                <h3>機械腕（双腕）システム</h3>
+                <p>
+                  カメラ・距離/IMUセンサーを統合し、双腕制御の安定性と可搬性を重視した構成へ発展。
+                  軽作業支援を見据えた制御設計を行っています。
+                </p>
+              </article>
+            </div>
           </div>
         </div>
       </section>
