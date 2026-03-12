@@ -263,6 +263,13 @@ p {
   flex-wrap: wrap;
 }
 
+.section-cta {
+  margin: 4px 0 18px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
